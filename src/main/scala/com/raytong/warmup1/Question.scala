@@ -41,4 +41,8 @@ object Question {
     if (str.startsWith("not")) str
     else "not " + str
   }
+  
+  def missingChar(str: String, n: Int): String = {
+      str.substring(0, n) + str.substring(n + 1)
+  }
 }
