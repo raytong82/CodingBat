@@ -43,6 +43,12 @@ object Question {
   }
   
   def missingChar(str: String, n: Int): String = {
-      str.substring(0, n) + str.substring(n + 1)
+    str.substring(0, n) + str.substring(n + 1)
+  }
+  
+  def frontBack(str: String): String = {
+    val len = str.length
+    if (len <= 1) str
+    else str.charAt(len - 1) + str.substring(1, len - 1) + str.charAt(0)
   }
 }
