@@ -27,4 +27,18 @@ object Question {
   def makes10(a: Int, b: Int): Boolean = {
     a == 10 || b == 10 || a + b == 10
   }
+
+  def nearHundred(n: Int): Boolean = {
+    Math.abs(n - 100) <= 10 || Math.abs(n - 200) <= 10
+  }
+
+  def posNeg(a: Int, b: Int, negative: Boolean): Boolean = {
+    if (negative) a < 0 && b < 0
+    (a > 0 && b < 0) || (a < 0 && b > 0)
+  }
+
+  def notString(str: String): String = {
+    if (str.startsWith("not")) str
+    else "not " + str
+  }
 }
