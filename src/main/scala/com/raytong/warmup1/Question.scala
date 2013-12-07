@@ -14,4 +14,9 @@ object Question {
     if (a == b) a * 4
     else a + b
   }
+
+  def diff21(n: Int): Int = {
+    if (n > 21) Math.abs(n - 21) * 2
+    else Math.abs(21 - n)
+  }
 }
