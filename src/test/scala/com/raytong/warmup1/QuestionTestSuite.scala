@@ -21,4 +21,19 @@ class QuestionTestSuite extends FunSuite {
         sleepIn(weekday, vacation) should be === result
     }
   }
+
+  val monkeyTroubleData = Table(
+    ("aSmile", "bSmile", "result"),
+    (true, true, true),
+    (false, false, true),
+    (true, false, false),
+    (false, true, false)
+  )
+
+  test("monkeyTrouble") {
+    forAll(monkeyTroubleData) {
+      (aSmile: Boolean, bSmile: Boolean, result: Boolean) =>
+        monkeyTrouble(aSmile, bSmile) should be === result
+    }
+  }
 }
