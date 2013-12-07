@@ -36,4 +36,23 @@ class QuestionTestSuite extends FunSuite {
         monkeyTrouble(aSmile, bSmile) should be === result
     }
   }
+
+  val sumDoubleData = Table(
+    ("a", "b", "result"),
+    (1, 2,3),
+    (3,2,5),
+    (2,2,8),
+    (-1,0,-1),
+    (3,3,12),
+    (0,0,0),
+    (0,1,1),
+    (3,4,7)
+  )
+
+  test("sumDouble") {
+    forAll(sumDoubleData) {
+      (a: Int, b: Int, result: Int) =>
+        sumDouble(a, b) should be === result
+    }
+  }
 }
