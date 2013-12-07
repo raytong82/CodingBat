@@ -19,4 +19,8 @@ object Question {
     if (n > 21) Math.abs(n - 21) * 2
     else Math.abs(21 - n)
   }
+
+  def parrotTrouble(talking: Boolean, hour: Int): Boolean = {
+    talking && (hour < 7 || hour > 20)
+  }
 }

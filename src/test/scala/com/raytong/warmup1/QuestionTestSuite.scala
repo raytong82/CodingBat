@@ -80,4 +80,25 @@ class QuestionTestSuite extends FunSuite with Matchers {
         diff21(n) should be(result)
     }
   }
+
+  val parrotTroubleData = Table(
+    ("talking", "hour", "result"),
+    (true, 6, true),
+    (true, 7, false),
+    (false, 6, false),
+    (true, 21, true),
+    (false, 21, false),
+    (false, 20, false),
+    (true, 23, true),
+    (false, 23, false),
+    (true, 20, false),
+    (false, 12, false)
+  )
+
+  test("parrotTrouble") {
+    forAll(parrotTroubleData) {
+      (talking: Boolean, hour: Int, result: Boolean) =>
+        parrotTrouble(talking, hour) should be(result)
+    }
+  }
 }
