@@ -22,6 +22,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: junit-dep-4.10" level="project" />
     <orderEntry type="library" exported="" name="Gradle: groovy-all-2.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit-4.11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: scalatest_2.9.2-1.9.1" level="project" />
   </component>
 </module>
 
