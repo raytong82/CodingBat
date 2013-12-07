@@ -23,4 +23,8 @@ object Question {
   def parrotTrouble(talking: Boolean, hour: Int): Boolean = {
     talking && (hour < 7 || hour > 20)
   }
+
+  def makes10(a: Int, b: Int): Boolean = {
+    a == 10 || b == 10 || a + b == 10
+  }
 }

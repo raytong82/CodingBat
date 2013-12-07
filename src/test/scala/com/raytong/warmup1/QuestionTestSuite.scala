@@ -101,4 +101,24 @@ class QuestionTestSuite extends FunSuite with Matchers {
         parrotTrouble(talking, hour) should be(result)
     }
   }
+
+  val makes10Data = Table(
+    ("a", "b", "result"),
+    (9, 10, true),
+    (9, 9, false),
+    (1, 9, true),
+    (10, 1, true),
+    (10, 10, true),
+    (8, 2, true),
+    (8, 3, false),
+    (10, 42, true),
+    (12, -2, true)
+  )
+
+  test("makes10") {
+    forAll(makes10Data) {
+      (a: Int, b: Int, result: Boolean) =>
+        makes10(a, b) should be(result)
+    }
+  }
 }
