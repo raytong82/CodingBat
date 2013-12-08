@@ -51,4 +51,9 @@ object Question {
     if (len <= 1) str
     else str.charAt(len - 1) + str.substring(1, len - 1) + str.charAt(0)
   }
+  
+  def front3(str: String): String = {
+    if (str.length <= 3) str * 3
+    else str.substring(0, 3) * 3
+  }
 }
