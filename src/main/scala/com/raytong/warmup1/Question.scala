@@ -62,4 +62,8 @@ object Question {
     val last = str.charAt(len - 1)
     last + str + last
   }
+  
+  def or35(n: Int): Boolean = {
+    n % 3 == 0 || n % 5 == 0
+  }
 }
