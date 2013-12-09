@@ -76,4 +76,10 @@ object Question {
   def startHi(str: String): Boolean = {
     str.startsWith("hi")
   }
+  
+  def icyHot(temp1: Int, temp2: Int): Boolean = {
+    if (temp1 < 0) temp2 > 100
+    else if (temp2 < 0) temp1 > 100
+    else false
+  }
 }
