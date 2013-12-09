@@ -72,4 +72,8 @@ object Question {
     val first2 = str.substring(0, 2)
     first2 + str + first2
   }
+  
+  def startHi(str: String): Boolean = {
+    str.startsWith("hi")
+  }
 }
