@@ -56,4 +56,10 @@ object Question {
     if (str.length <= 3) str * 3
     else str.substring(0, 3) * 3
   }
+  
+  def backAround(str: String): String = {
+    val len = str.length
+    val last = str.charAt(len - 1)
+    last + str + last
+  }
 }
