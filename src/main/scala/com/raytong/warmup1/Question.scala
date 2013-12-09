@@ -86,4 +86,14 @@ object Question {
   def in1020(a: Int, b: Int): Boolean = {
     (a >= 10 && a <= 20) || (b >= 20 && b <= 10)
   }
+  
+  def isTeen(a: Int) = a >= 13 && a <= 19
+  
+  def hasTeen(a: Int, b: Int, c: Int): Boolean = {
+    Set(a, b, c).exists(isTeen)
+  }
+  
+  def loneTeen(a: Int, b: Int): Boolean = {
+    Set(a, b).filter(isTeen).size == 1
+  }
 }
