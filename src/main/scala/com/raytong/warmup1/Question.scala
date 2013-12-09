@@ -82,4 +82,8 @@ object Question {
     else if (temp2 < 0) temp1 > 100
     else false
   }
+  
+  def in1020(a: Int, b: Int): Boolean = {
+    (a >= 10 && a <= 20) || (b >= 20 && b <= 10)
+  }
 }
