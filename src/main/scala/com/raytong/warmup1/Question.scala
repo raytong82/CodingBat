@@ -66,4 +66,10 @@ object Question {
   def or35(n: Int): Boolean = {
     n % 3 == 0 || n % 5 == 0
   }
+  
+  def front22(str: String): String = {
+    if (str.length < 2) str + str + str
+    val first2 = str.substring(0, 2)
+    first2 + str + first2
+  }
 }
