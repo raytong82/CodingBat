@@ -90,10 +90,41 @@ object Question {
   def isTeen(a: Int) = a >= 13 && a <= 19
   
   def hasTeen(a: Int, b: Int, c: Int): Boolean = {
-    Set(a, b, c).exists(isTeen)
+    List(a, b, c).exists(isTeen)
   }
   
   def loneTeen(a: Int, b: Int): Boolean = {
-    Set(a, b).filter(isTeen).size == 1
+    List(a, b).filter(isTeen).size == 1
+  }
+  
+  def delDel(str: String): String = {
+    if (str.indexOf("del") == 1) str.replace("del", "")
+    else str
+  }
+  
+  def minStart(str: String): Boolean = {
+    if (str.length < 3) false;
+    else str.charAt(1) == 'i' && str.charAt(2) == 'x'
+  }
+  
+  def startOz(str: String): String = {
+    val len = str.length
+    if (len >= 1 && str.charAt(0) == 'o')
+      if (len >= 2 && str.charAt(1) == 'z') "oz"
+      else "o"
+    else if (len >= 2 && str.charAt(1) == 'z') "z"
+    ""
+  }
+  
+  def intMax(a: Int, b: Int, c: Int): Int = {
+    List(a, b, c).reduceLeft(_ max _)
+  }
+  
+  def close10(a: Int, b: Int): Int = {
+    val absA = Math.abs(a - 10)
+    val absB = Math.abs(b - 10)
+    if (absA == absB) 0
+    else if (absA < absB) absA
+    else absB
   }
 }
