@@ -127,4 +127,18 @@ object Question {
     else if (absA < absB) absA
     else absB
   }
+
+  def inRange(x: Int)(start: Int, end: Int) = x >= start && x <= end
+
+  def in3050(a: Int, b: Int): Boolean = {
+    val list = List(a, b)
+    def in3040(x: Int) = inRange(x)(30, 40)
+    def in4050(x: Int) = inRange(x)(40, 50)
+    list.forall(x => in3040(x)) || list.forall(x => in4050(x))
+  }
+  
+  def max1020(a: Int, b: Int): Int = {
+    def in1020(x: Int) = inRange(x)(10, 20)
+    List(a, b).filter(x => in1020(x)).max
+  }
 }
