@@ -141,4 +141,9 @@ object Question {
     def in1020(x: Int) = inRange(x)(10, 20)
     List(a, b).filter(x => in1020(x)).max
   }
+  
+  def stringE(str: String): Boolean = {
+    val count = str.toList.filter(_ == 'e').size
+    count >= 1 && count <= 3
+  }
 }
