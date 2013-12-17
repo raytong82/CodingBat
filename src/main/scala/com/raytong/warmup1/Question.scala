@@ -146,4 +146,14 @@ object Question {
     val count = str.toList.filter(_ == 'e').size
     count >= 1 && count <= 3
   }
+  
+  def lastDigit(a: Int, b: Int): Boolean = {
+    a % 10 == b % 10
+  }
+  
+  def endUp(str: String): String = {
+    val len = str.length
+    if (len <= 3) str.toUpperCase
+    else str.substring(0, len-3) + str.substring(len-3).toUpperCase
+  }
 }
