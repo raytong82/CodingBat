@@ -156,4 +156,8 @@ object Question {
     if (len <= 3) str.toUpperCase
     else str.substring(0, len-3) + str.substring(len-3).toUpperCase
   }
+  
+  def everyNth(str: String, n: Int): String = {
+    str.toList.zipWithIndex.filter(_._2 % 2 == 0).map(_._1).toString
+  }
 }
