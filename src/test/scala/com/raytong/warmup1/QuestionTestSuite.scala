@@ -195,4 +195,24 @@ class QuestionTestSuite extends FunSuite with Matchers {
         notString(str) should be(result)
     }
   }
+
+  val missingCharData = Table(
+    ("str", "n", "result"),
+    ("kitten", 1, "ktten"),
+    ("kitten", 0, "itten"),
+    ("Hi", 0, "i"),
+    ("Hi", 1, "H"),
+    ("code", 0, "ode"),
+    ("code", 1, "cde"),
+    ("code", 2, "coe"),
+    ("code", 3, "cod"),
+    ("chocolate", 8, "chocolat")
+  )
+
+  test("missingChar") {
+    forAll(missingChar) {
+      (str: String, n: Int, result: String) =>
+        missingChar(str, n) should be(result)
+    }
+  }
 }
