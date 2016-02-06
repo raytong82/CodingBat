@@ -215,4 +215,23 @@ class QuestionTestSuite extends FunSuite with Matchers {
         missingChar(str, n) should be(result)
     }
   }
+
+  val frontBackData = Table(
+    ("str", "result"),
+    ("code", "eodc"),
+    ("a", "a"),
+    ("ab", "ba"),
+    ("abc", "cba"),
+    ("", ""),
+    ("Chocolate", "ehocolatC"),
+    ("aavJ", "Java"),
+    ("hello", "oellh")
+  )
+
+  test("frontBack") {
+    forAll(frontBackData) {
+      (str: String, result: String) =>
+        frontBack(str) should be(result)
+    }
+  }
 }
