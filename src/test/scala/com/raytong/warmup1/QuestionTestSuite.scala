@@ -252,4 +252,21 @@ class QuestionTestSuite extends FunSuite with Matchers {
         front3(str) should be(result)
     }
   }
+
+  val backAroundData = Table(
+    ("str", "result"),
+    ("cat", "tcatt"),
+    ("Hello", "oHelloo"),
+    ("a", "aaa"),
+    ("abc", "cabcc"),
+    ("read", "dreadd"),
+    ("boo", "obooo")
+  )
+
+  test("backAround") {
+    forAll(backAroundData) {
+      (str: String, result: String) =>
+        backAround(str) should be(result)
+    }
+  }
 }
