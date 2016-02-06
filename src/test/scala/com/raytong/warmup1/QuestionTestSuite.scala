@@ -299,7 +299,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   test("or35") {
     forAll(or35Data) {
-      (n: String, result: Boolean) =>
+      (n: Int, result: Boolean) =>
         or35(n) should be(result)
     }
   }
