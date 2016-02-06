@@ -180,7 +180,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   val notStringData = Table(
     ("str", "result"),
-    ("candy", "not canday"),
+    ("candy", "not candy"),
     ("x", "not x"),
     ("not bad", "not bad"),
     ("bad", "not bad"),
