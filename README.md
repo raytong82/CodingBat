@@ -1,8 +1,8 @@
 CodingBat
 =========
 
-CodingBat Practices in Scala
+[![Build Status](https://travis-ci.org/raytong82/CodingBat.svg?branch=master)](https://travis-ci.org/raytong82/CodingBat)
 
-Jenkins: https://raytong82.ci.cloudbees.com/job/CodingBat%20on%20GitHub/
+CodingBat Practices in Scala
 
 Cloud9: https://c9.io/raytong82/codingbat
