@@ -151,7 +151,8 @@ class QuestionTestSuite extends FunSuite with Matchers {
   val posNegData = Table(
     ("a", "b", "negative", "result"),
     (1, -1, false, true),
-    (-1, 1, false, true)
+    (-1, 1, false, true),
+    (-4, -5, true, true)
   )
 
   test("posNeg") {
