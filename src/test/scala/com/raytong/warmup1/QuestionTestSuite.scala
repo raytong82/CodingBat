@@ -121,4 +121,30 @@ class QuestionTestSuite extends FunSuite with Matchers {
         makes10(a, b) should be(result)
     }
   }
+
+  val nearHundredData = Table(
+    ("a", "result"),
+    (93, true),
+    (90, true),
+    (89, false),
+    (110, true),
+    (111, false),
+    (121, false),
+    (0, false),
+    (5, false),
+    (191, true),
+    (189, false),
+    (190, true),
+    (200, true),
+    (210, true),
+    (211, false),
+    (290, false)
+  )
+
+  test("nearHundred") {
+    forAll(nearHundredData) {
+      (a: Int, result: Boolean) =>
+        nearHundred(a) should be(result)
+    }
+  }
 }
