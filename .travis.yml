@@ -2,3 +2,6 @@ language: scala
 
 notifications:
   email: false
+
+after_failure:
+  - cat build/reports/tests/index.html
