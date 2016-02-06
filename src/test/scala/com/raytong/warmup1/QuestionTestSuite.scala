@@ -210,7 +210,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   )
 
   test("missingChar") {
-    forAll(missingChar) {
+    forAll(missingCharData) {
       (str: String, n: Int, result: String) =>
         missingChar(str, n) should be(result)
     }
