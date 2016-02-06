@@ -269,4 +269,38 @@ class QuestionTestSuite extends FunSuite with Matchers {
         backAround(str) should be(result)
     }
   }
+
+  val or35Data = Table(
+    ("n", "result"),
+    (3, true),
+    (10, true),
+    (8, false),
+    (15, true),
+    (5, true),
+    (9, true),
+    (4, false),
+    (7, false),
+    (6, true),
+    (17, false),
+    (18, true),
+    (19, false),
+    (29, false),
+    (20, true),
+    (21, true),
+    (22, false),
+    (45, true),
+    (99, true),
+    (100, true),
+    (101, false),
+    (121, false),
+    (122, false),
+    (123, true)
+  )
+
+  test("or35") {
+    forAll(or35Data) {
+      (n: String, result: Boolean) =>
+        or35(n) should be(result)
+    }
+  }
 }
