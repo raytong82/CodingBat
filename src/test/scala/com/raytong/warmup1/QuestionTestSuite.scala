@@ -155,13 +155,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     (-4, -5, true, true),
     (-4, -5, false, false),
     (-4, 5, false, true),
-    (-4, 5, true, false),
-    (1, 1, false, false),
-    (-1, -1, false, false),
-    (1, -1, true, false),
-    (-1, 1, true, false),
-    (1, 1, true, false),
-    (-1, -1, true, true)
+    (-4, 5, true, false)
   )
 
   test("posNeg") {
