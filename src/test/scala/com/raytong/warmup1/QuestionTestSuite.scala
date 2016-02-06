@@ -177,4 +177,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         posNeg(a, b, negative) should be(result)
     }
   }
+
+  val notStringData = Table(
+    ("str", "result"),
+    ("candy", "not canday"),
+    ("x", "not x"),
+    ("not bad", "not bad"),
+    ("bad", "not bad"),
+    ("not", "not"),
+    ("is not", "not is not"),
+    ("no", "not no")
+  )
+
+  test("notString") {
+    forAll(notStringData) {
+      (str: String, result: Boolean) =>
+        notString(str) should be(result)
+    }
+  }
 }
