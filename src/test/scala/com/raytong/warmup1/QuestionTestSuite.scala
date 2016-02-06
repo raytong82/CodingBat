@@ -12,7 +12,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   val sleepInData = Table(
     ("weekday", "vacation", "result"),
-    (false, false, false),
+    (false, false, true),
     (true, false, false),
     (false, true, true),
     (true, true, true)
