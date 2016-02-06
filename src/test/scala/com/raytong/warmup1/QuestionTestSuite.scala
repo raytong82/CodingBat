@@ -152,13 +152,29 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("a", "b", "negative", "result"),
     (1, -1, false, true),
     (-1, 1, false, true),
-    (-4, -5, true, true)
+    (-4, -5, true, true),
+    (-4, -5, false, false),
+    (-4, 5, false, true),
+    (-4, 5, true, false),
+    (1, 1, false, false),
+    (-1, -1, false, false),
+    (1, -1, true, false),
+    (-1, 1, true, false),
+    (1, 1, true, false),
+    (-1, -1, true, true),
+    (5, -5, false, true),
+    (-6, 6, false, true),
+    (-5, -6, false, false),
+    (-2, -1, false, false),
+    (1, 2, false, false),
+    (5, 6, true, false),
+    (-5, -5, true, true)
   )
 
   test("posNeg") {
     forAll(posNegData) {
       (a: Int, b: Int, negative: Boolean, result: Boolean) =>
-      posNeg(a, b, negative) should be(result)
+        posNeg(a, b, negative) should be(result)
     }
   }
 }

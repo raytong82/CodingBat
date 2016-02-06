@@ -33,9 +33,8 @@ object Question {
   }
 
   def posNeg(a: Int, b: Int, negative: Boolean): Boolean = {
-    if (negative)
-      a < 0 && b < 0
-    (a > 0 && b < 0) || (a < 0 && b > 0)
+    if (negative) a < 0 && b < 0
+    else (a > 0 && b < 0) || (a < 0 && b > 0)
   }
 
   def notString(str: String): String = {
