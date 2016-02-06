@@ -191,7 +191,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   test("notString") {
     forAll(notStringData) {
-      (str: String, result: Boolean) =>
+      (str: String, result: String) =>
         notString(str) should be(result)
     }
   }
