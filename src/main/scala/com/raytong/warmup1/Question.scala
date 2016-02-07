@@ -138,7 +138,11 @@ object Question {
   
   def max1020(a: Int, b: Int): Int = {
     def in1020(x: Int) = inRange(x)(10, 20)
-    List(a, b).filter(x => in1020(x)).max
+    val list = List(a, b).filter(x => in1020(x))
+    list match {
+      case x :: xs => list.max
+      case _ => 0
+    }
   }
   
   def stringE(str: String): Boolean = {
