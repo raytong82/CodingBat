@@ -83,7 +83,7 @@ object Question {
   }
   
   def in1020(a: Int, b: Int): Boolean = {
-    (a >= 10 && a <= 20) || (b >= 20 && b <= 10)
+    (a >= 10 && a <= 20) || (b >= 10 && b <= 20)
   }
   
   def isTeen(a: Int) = a >= 13 && a <= 19
