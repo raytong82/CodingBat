@@ -417,9 +417,8 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   test("loneTeen") {
     forAll(loneTeenData) {
-      (a: Int, b: Int, result: Boolean) {
+      (a: Int, b: Int, result: Boolean) =>
         loneTeen(a, b) should be(result)
-      }
     }
   }
 }
