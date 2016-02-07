@@ -68,11 +68,8 @@ object Question {
   }
   
   def front22(str: String): String = {
-    if (str.length < 2)
-      str * 3
-    else
-      val first2 = str.substring(0, 2)
-      first2 + str + first2
+    if (str.length < 2) str * 3
+    else str.substring(0, 2) + str + str.substring(0, 2)
   }
   
   def startHi(str: String): Boolean = {
