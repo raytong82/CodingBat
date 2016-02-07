@@ -132,4 +132,28 @@ class QuestionTestSuite extends FunSuite with Matchers {
         stringSplosion(str) should be(result)
     }
   }
+
+  val last2Data = Table(
+    ("str", "result"),
+    ("hixxhi", 1),
+    ("xaxxaxaxx", 1)
+    ("axxxaaxx", 2),
+    ("xxaxxaxxaxx", 3),
+    ("xaxaxaxxx", 0),
+    ("xxxx", 2),
+    ("13121312", 1),
+    ("11212", 1),
+    ("13121311", 0),
+    ("1717171", 2)
+    ("hi", 0),
+    ("h", 0),
+    ("", 0)
+  )
+
+  test("last2") {
+    forAll(last2Data) {
+      (str: String, result: Int) =>
+        last2(str) should be(result)
+    }
+  }
 }

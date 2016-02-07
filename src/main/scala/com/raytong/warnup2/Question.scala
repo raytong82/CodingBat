@@ -38,4 +38,21 @@ object Question {
     }
     listSplosion(str.toList).mkString
   }
+
+  def last2(str: String): String = {
+    val len = str.length
+    if (len <= 2) 0
+    else {
+      val two = str.substring(len - 2, len)
+      val head = str.substring(0, len - 1)
+      def matched(s: String): Int = {
+        if (s.length < 2) 0
+        else {
+          val score = if (s.startsWith(two)) 1 else 0
+          matched(s.substring(1)) + score
+        }
+      }
+      matched(head)
+    }
+  }
 }
