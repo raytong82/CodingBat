@@ -55,4 +55,8 @@ object Question {
       matched(head)
     }
   }
+
+  def arrayCount9(nums: List[Int]): Int = {
+    nums.filter(_ == 9).size
+  }
 }
