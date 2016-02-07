@@ -629,7 +629,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   val everyNthData = Table(
     ("str", "n", "result"),
     ("Miracle", 2, "Mrce"),
-    ("abcedfg", 2, "aceg"),
+    ("abcdefg", 2, "aceg"),
     ("abcdefg", 3, "adg"),
     ("Chocolate", 3, "Cca"),
     ("Chocolates", 3, "Ccas"),
