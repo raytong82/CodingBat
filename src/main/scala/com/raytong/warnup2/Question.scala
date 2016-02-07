@@ -59,4 +59,15 @@ object Question {
   def arrayCount9(nums: List[Int]): Int = {
     nums.filter(_ == 9).size
   }
+
+  def arrayFront9(nums: List[Int]): Boolean = {
+    def sub(nums: List[Int], count: Int): Boolean = {
+      if (count == 0) false
+      else nums match {
+        case 9 :: xs => if (x == 9) true else sub(xs, count - 1)
+        case _ => false
+      }
+    }
+    sub(nums, 4)
+  }
 }
