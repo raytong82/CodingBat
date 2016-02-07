@@ -26,4 +26,8 @@ object Question {
     val i = str.indexOf('x')
     str.indexOf('x', i+1) == i+1
   }
+
+  def stringBits(str: String): String = {
+    str.toList.zipWithIndex.filter(_._2 % 2 == 0).map(_._1).mkString
+  }
 }
