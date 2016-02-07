@@ -16,6 +16,7 @@ object Question {
       t._1 == t._2 && t._1 == 'x'
     val s1 = str.toList
     val s2 = s1.tail
-    s1.zip(s2).filter(isXX).size
+    if (str.length <= 1) 0
+    else s1.zip(s2).filter(isXX).size
   }
 }
