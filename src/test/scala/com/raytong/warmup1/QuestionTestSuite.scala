@@ -376,7 +376,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     }
   }
 
-  val = hasTeenData = Table(
+  val hasTeenData = Table(
     ("a", "b", "c", "result"),
     (13, 20, 10, true),
     (20, 19, 10, true),
