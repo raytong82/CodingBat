@@ -492,11 +492,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     (9, 3, 3, 9),
     (3, 9, 3, 9),
     (3, 3, 9, 9),
-    (8, 2, 3, 8),
-    (-3, -1, -2, -1),
-    (6, 2, 5, 6),
-    (5, 6, 2, 6),
-    (5, 2, 6, 6)
+    (8, 2, 3, 8)
   )
 
   test("intMax") {
