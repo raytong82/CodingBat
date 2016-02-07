@@ -305,7 +305,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   }
 
   val front22Data = Table(
-    ("str", result),
+    ("str", "result"),
     ("kitten", "kikittenki"),
     ("Ha", "HaHaHa"),
     ("abc", "ababcab"),
