@@ -39,7 +39,7 @@ object Question {
     listSplosion(str.toList).mkString
   }
 
-  def last2(str: String): String = {
+  def last2(str: String): Int = {
     val len = str.length
     if (len <= 2) 0
     else {
