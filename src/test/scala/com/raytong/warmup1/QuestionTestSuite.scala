@@ -397,4 +397,29 @@ class QuestionTestSuite extends FunSuite with Matchers {
         hasTeen(a, b, c) should be(result)
     }
   }
+
+  val loneTeenData = Table(
+    ("a", "b", "result"),
+    (13, 99, true),
+    (21, 19, true)
+    (13, 13, false),
+    (14, 20, true),
+    (20, 15, true),
+    (16, 17, false),
+    (16, 9, false),
+    (16, 18, false),
+    (13, 19, false),
+    (13, 20, true),
+    (6, 18, true),
+    (99, 13, true),
+    (99, 99, false)
+  )
+
+  test("loneTeen") {
+    forAll(loneTeenData) {
+      (a: Int, b: Int, result: Boolean) {
+        loneTeen(a, b) should be(result)
+      }
+    }
+  }
 }
