@@ -486,13 +486,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   val intMaxData = Table(
     ("a", "b", "c", "result"),
-    (1, 2, 3, 3),
-    (1, 3, 2, 3),
-    (3, 2, 1, 3),
-    (9, 3, 3, 9),
-    (3, 9, 3, 9),
-    (3, 3, 9, 9),
-    (8, 2, 3, 8)
+    (1, 2, 3, 3)
   )
 
   test("intMax") {
