@@ -193,7 +193,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   test("arrayFront9") {
     forAll(arrayFront9Data) {
-      (nums: List[Int]: result: Boolean) =>
+      (nums: List[Int], result: Boolean) =>
         arrayFront9(nums) should be(result)
     }
   }
