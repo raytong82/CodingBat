@@ -323,6 +323,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   }
 
   val startHiData = Table(
+    ("str", "result"),
     ("hi there", true),
     ("hi", true),
     ("hello hi", false),
