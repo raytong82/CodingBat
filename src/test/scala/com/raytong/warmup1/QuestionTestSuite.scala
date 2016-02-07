@@ -421,4 +421,25 @@ class QuestionTestSuite extends FunSuite with Matchers {
         loneTeen(a, b) should be(result)
     }
   }
+
+  val delDelData = Table(
+    ("str", "result"),
+    ("adelbc", "abc"),
+    ("adelHello", "aHello"),
+    ("abcdel", "abcdel"),
+    ("add", "add"),
+    ("ad", "ad"),
+    ("a", "a"),
+    ("", ""),
+    ("del", "del"),
+    ("adel", "a"),
+    ("aadelbb", "aadelbb")
+  )
+
+  test("delDel") {
+    forAll(delDelData) {
+      (str: String, result: String) =>
+        delDel(str) should be(result)
+    }
+  }
 }
