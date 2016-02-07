@@ -303,4 +303,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         or35(n) should be(result)
     }
   }
+
+  val front22Data = Table(
+    ("str", result),
+    ("kitten", "kikittenki"),
+    ("Ha", "HaHaHa"),
+    ("abc", "ababcab"),
+    ("ab", "ababab"),
+    ("a", "aaa"),
+    ("", ""),
+    ("Logic", "LoLogicLo")
+  )
+
+  test("front22") {
+    forAll(front22Data) {
+      (str: String, result: String) =>
+        front22(str) should be(result)
+    }
+  }
 }
