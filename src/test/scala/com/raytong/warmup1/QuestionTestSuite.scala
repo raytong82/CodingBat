@@ -357,4 +357,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         icyHot(temp1, temp2) should be(result)
     }
   }
+
+  val in1020Data = Table(
+    ("a", "b", "result"),
+    (12, 99, true),
+    (21, 12, true),
+    (8, 99, false),
+    (99, 10, true),
+    (20, 20, true),
+    (21, 21, false),
+    (9, 9, false)
+  )
+
+  test("in1020") {
+    forAll(in1020Data) {
+      (a: Int, b: Int, result: Boolean) =>
+        in1020(a, b) should be(result)
+    }
+  }
 }
