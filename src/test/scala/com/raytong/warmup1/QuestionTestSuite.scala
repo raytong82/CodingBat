@@ -406,7 +406,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     (14, 20, true),
     (20, 15, true),
     (16, 17, false),
-    (16, 9, false),
+    (16, 9, true),
     (16, 18, false),
     (13, 19, false),
     (13, 20, true),
