@@ -527,4 +527,27 @@ class QuestionTestSuite extends FunSuite with Matchers {
         close10(a, b) should be(result)
     }
   }
+
+  val in3050Data = Table(
+    ("a", "b", "result"),
+    (30, 31, true),
+    (30, 41, false),
+    (40, 50, true),
+    (40, 51, false),
+    (39, 50, false),
+    (50, 39, false),
+    (40, 39, true),
+    (49, 48, true),
+    (50, 40, true),
+    (50, 51, false),
+    (35, 36, true),
+    (35, 45, false)
+  )
+
+  test("in3050") {
+    forAll(in3050Data) {
+      (a: Int, b: Int, result: Boolean) =>
+        in3050(a, b) should be(result)
+    }
+  }
 }
