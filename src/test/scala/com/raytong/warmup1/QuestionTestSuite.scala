@@ -589,4 +589,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         stringE(str) should be(result)
     }
   }
+
+  val lastDigitData = Table(
+    ("a", "b", "result"),
+    (7, 17, true),
+    (6, 17, false),
+    (3, 113, true),
+    (114, 113, false),
+    (114, 4, true),
+    (10, 0, true),
+    (11, 0, false)
+  )
+
+  test("lastDigit") {
+    forAll(lastDigitData) {
+      (a: Int, b: Int, result: Boolean) =>
+        lastDigit(a, b) should be(result)
+    }
+  }
 }
