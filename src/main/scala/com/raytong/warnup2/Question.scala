@@ -21,4 +21,9 @@ object Question {
       s1.zip(s2).filter(isXX).size
     }
   }
+
+  def doubleX(str: String): Boolean = {
+    val i = str.indexOf('x')
+    str.indexOf('x', i+1) == i+1
+  }
 }

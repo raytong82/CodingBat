@@ -68,4 +68,26 @@ class QuestionTestSuite extends FunSuite with Matchers {
         countXX(str) should be(result)
     }
   }
+
+  val doubleXData = Table(
+    ("str", "result"),
+    ("axxbb", true),
+    ("axaxax", false),
+    ("xxxxx", true),
+    ("xaxxx", false),
+    ("aaaax", false),
+    ("", false),
+    ("abc", false),
+    ("x", false),
+    ("xx", true),
+    ("xax", false),
+    ("xaxx", false)
+  )
+
+  test("doubleX") {
+    forAll(doubleXData) {
+      (str: String, result: Boolean) =>
+        doubleX(str) should be(result)
+    }
+  }
 }
