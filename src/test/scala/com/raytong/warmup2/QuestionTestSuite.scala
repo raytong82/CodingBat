@@ -111,4 +111,25 @@ class QuestionTestSuite extends FunSuite with Matchers {
         stringBits(str) should be(result)
     }
   }
+
+  val stringSplosionData = Table(
+    ("str", "result"),
+    ("Code", "CCoCodCode"),
+    ("abc", "aababc"),
+    ("ab", "aab"),
+    ("x", "x"),
+    ("fade", "ffafadfade"),
+    ("There", "TThTheTherThere"),
+    ("Kitten", "KKiKitKittKitteKitten"),
+    ("Bye", "BByBye"),
+    ("Good", "GGoGooGood"),
+    ("Bad", "BBaBad")
+  )
+
+  test("stringSplosion") {
+    forAll(stringSplosionData) {
+      (str: String, result: String) =>
+        stringSplosion(str) should be(result)
+    }
+  }
 }

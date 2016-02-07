@@ -30,4 +30,12 @@ object Question {
   def stringBits(str: String): String = {
     str.toList.zipWithIndex.filter(_._2 % 2 == 0).map(_._1).mkString
   }
+
+  def stringSplosion(str: String): String = {
+    if (str.length <= 1) str
+    else {
+      val list = str.toList
+      stringSplosion(list.init.mkString) :+ list.last
+    }
+  }
 }
