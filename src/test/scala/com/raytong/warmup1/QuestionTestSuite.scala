@@ -339,4 +339,21 @@ class QuestionTestSuite extends FunSuite with Matchers {
         startHi(str) should be(result)
     }
   }
+
+  val icyHotData = Table(
+    ("temp1", "temp2", "result"),
+    (120, -1, true),
+    (-1, 120, true),
+    (2, 120, false),
+    (-1, 100, false),
+    (-2, -2, false),
+    (120, 120, false)
+  )
+
+  test("icyHot") {
+    forAll(icyHotData) {
+      (temp1: Int, temp2: Int, result: Boolean) =>
+        icyHot(temp1, temp2) should be(result)
+    }
+  }
 }
