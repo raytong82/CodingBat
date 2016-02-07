@@ -607,4 +607,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         lastDigit(a, b) should be(result)
     }
   }
+
+  val endUpData = Table(
+    ("str", "result"),
+    ("Hello", "HeLLO"),
+    ("hi there", "hi thERE"),
+    ("hi", "HI"),
+    ("woo hoo", "woo HOO"),
+    ("xyz12", "xyZ12"),
+    ("x", "X"),
+    ("", "")
+  )
+
+  test("endUp") {
+    forAll(endUpData) {
+      (str: String, result: String) =>
+        endUp(str) should be(result)
+    }
+  }
 }
