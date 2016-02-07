@@ -99,7 +99,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("HiHiHi", "HHH"),
     ("", ""),
     ("Greetings", "Getns"),
-    ("Chocolate", "Coot"),
+    ("Chocoate", "Coot"),
     ("pi", "p"),
     ("Hello Kitten", "HloKte"),
     ("Hxaxpxpxy", "happy")
