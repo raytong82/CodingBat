@@ -102,7 +102,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("Chocoate", "Coot"),
     ("pi", "p"),
     ("Hello Kitten", "HloKte"),
-    ("Hxaxpxpxy", "happy")
+    ("hxaxpxpxy", "happy")
   )
 
   test("stringBits") {
