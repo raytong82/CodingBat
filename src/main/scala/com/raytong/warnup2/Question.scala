@@ -72,7 +72,7 @@ object Question {
   }
 
   def array123(nums: List[Int]): Boolean = {
-    def findNum(nums: List[Int], target: Int): Boolean = {
+    def findNum(target: Int): Boolean = {
       nums.contains(target)
     }
     findNum(1) && findNum(2) && findNum(3)
