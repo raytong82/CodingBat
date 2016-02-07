@@ -48,4 +48,24 @@ class QuestionTestSuite extends FunSuite with Matchers {
         frontTimes(str, n) should be(result)
     }
   }
+
+  val countXXData = Table(
+    ("str", "result"),
+    ("abcxx", 1),
+    ("xxx", 2),
+    ("xxxx", 3),
+    ("abc", 0),
+    ("Hello there", 0),
+    ("Hexxo thxxe", 2),
+    ("", 0),
+    ("Kittens", 0),
+    ("Kittensxxx", 2)
+  )
+
+  test("countXX") {
+    forAll(countXXData) {
+      (str: String, result: Int) =>
+        countXX(str) should be(result)
+    }
+  }
 }
