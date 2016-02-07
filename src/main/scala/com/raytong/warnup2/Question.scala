@@ -64,7 +64,7 @@ object Question {
     def sub(nums: List[Int], count: Int): Boolean = {
       if (count == 0) false
       else nums match {
-        case 9 :: xs => if (x == 9) true else sub(xs, count - 1)
+        case x :: xs => if (x == 9) true else sub(xs, count - 1)
         case _ => false
       }
     }
