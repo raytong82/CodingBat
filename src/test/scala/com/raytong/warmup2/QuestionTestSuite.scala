@@ -139,7 +139,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("xaxxaxaxx", 1),
     ("axxxaaxx", 2),
     ("xxaxxaxxaxx", 3),
-    ("xaxaxaxxx", 0),
+    ("xaxaxaxx", 0),
     ("xxxx", 2),
     ("13121312", 1),
     ("11212", 1),
