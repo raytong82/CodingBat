@@ -321,4 +321,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         front22(str) should be(result)
     }
   }
+
+  val startHiData = Table(
+    ("hi there", true),
+    ("hi", true),
+    ("hello hi", false),
+    ("he", false),
+    ("h", false),
+    ("", false),
+    ("ho", false),
+    ("hi ho", true)
+  )
+
+  test("startHi") {
+    forAll(startHiData) {
+      (str: String, result: Boolean) =>
+        startHi(str) should be(result)
+    }
+  }
 }
