@@ -90,4 +90,25 @@ class QuestionTestSuite extends FunSuite with Matchers {
         doubleX(str) should be(result)
     }
   }
+
+  val stringBitsData = Table(
+    ("str", "result"),
+    ("Hello", "Hlo"),
+    ("Hi", "H"),
+    ("Heeololeo", "Hello"),
+    ("HiHiHi", "HHH"),
+    ("", ""),
+    ("Greetings", "Getns"),
+    ("Chocolate", "Coot"),
+    ("pi", "p"),
+    ("Hello Kitten", "HloKte"),
+    ("Hxaxpxpxy", "happy")
+  )
+
+  test("stringBits") {
+    forAll(stringBitsData) {
+      (str: String, result: String) =>
+        stringBits(str) should be(result)
+    }
+  }
 }
