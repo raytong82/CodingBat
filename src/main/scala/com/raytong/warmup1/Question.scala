@@ -161,6 +161,6 @@ object Question {
   }
   
   def everyNth(str: String, n: Int): String = {
-    str.toList.zipWithIndex.filter(_._2 % 2 == 0).map(_._1).toString
+    str.toList.zipWithIndex.filter(_._2 % n == 0).map(_._1).toString
   }
 }

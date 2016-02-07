@@ -625,4 +625,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         endUp(str) should be(result)
     }
   }
+
+  val everyNthData = Table(
+    ("str", "n", "result"),
+    ("Miracle", 2, "Mrce"),
+    ("abcedfg", 2, "aceg"),
+    ("abcdefg", 3, "adg"),
+    ("Chocolate", 3, "Cca"),
+    ("Chocolates", 3, "Ccas"),
+    ("Chocolates", 4, "Coe"),
+    ("Chocolates", 100, "C")
+  )
+
+  test("everyNth") {
+    forAll(everyNthData) {
+      (str: String, n: Int, result: String) =>
+        everyNth(str, n) should be(result)
+    }
+  }
 }
