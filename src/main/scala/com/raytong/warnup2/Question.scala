@@ -70,4 +70,12 @@ object Question {
     }
     sub(nums, 4)
   }
+
+  def array123(nums: List[Int]): Boolean = {
+    def matched(nums: List[Int], criteria: Int => Boolean): Boolean = {
+      nums.exists(criteria)
+    }
+    val findNum = x => if (x) true else false
+    matched(findNum(1)) || matched(findNum(2)) || matched(findNum(3))
+  }
 }

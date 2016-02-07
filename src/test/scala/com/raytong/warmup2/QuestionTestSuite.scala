@@ -197,4 +197,25 @@ class QuestionTestSuite extends FunSuite with Matchers {
         arrayFront9(nums) should be(result)
     }
   }
+
+  val array123Data = Table(
+    ("nums", "result"),
+    (List(1, 1, 2, 3, 1), true),
+    (List(1, 1, 2, 4, 1), false),
+    (List(1, 1, 2, 1, 2, 3), true),
+    (List(1, 1, 2, 1, 2, 1), false),
+    (List(1, 2, 3, 1, 2, 3), true),
+    (List(1, 2, 3), true),
+    (List(1, 1, 1), false),
+    (List(1, 2), false),
+    (List(1), false),
+    (List(), false)
+  )
+
+  test("array123") {
+    forAll(array123Data) {
+      (nums: List[Int], result: Boolean) =>
+        array123(nums) should be(result)
+    }
+  }
 }
