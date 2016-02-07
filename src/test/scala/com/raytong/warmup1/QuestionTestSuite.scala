@@ -550,4 +550,26 @@ class QuestionTestSuite extends FunSuite with Matchers {
         in3050(a, b) should be(result)
     }
   }
+
+  val max1020Data = Table(
+    ("a", "b", "result"),
+    (11, 19, 19),
+    (19, 11, 19),
+    (11, 9, 11),
+    (9, 21, 0),
+    (10, 21, 10),
+    (21, 10, 10),
+    (9, 11, 11),
+    (23, 10, 10),
+    (20, 10, 20),
+    (7, 20, 20),
+    (17, 16, 17)
+  )
+
+  test("max1020") {
+    forAll(max1020Data) {
+      (a: Int, b: Int, result: Int) =>
+        max1020(a, b) should be(result)
+    }
+  }
 }
