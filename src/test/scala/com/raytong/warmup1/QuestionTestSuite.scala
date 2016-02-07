@@ -579,7 +579,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("Heelle", true),
     ("Heelele", false),
     ("Hll", false),
-    ("e", false),
+    ("e", true),
     ("", false)
   )
 
