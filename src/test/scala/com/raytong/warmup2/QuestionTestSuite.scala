@@ -30,4 +30,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         stringTimes(str, n) should be(result)
     }
   }
+
+  val frontTimesData = Table(
+    ("str", "n", "result"),
+    ("Chocolate", 2, "ChoCho"),
+    ("Chocolate", 3, "ChoChoCho"),
+    ("Abc", 3, "AbcAbcAbc"),
+    ("Ab", 4, "AbAbAbAb"),
+    ("A", 4, "AAAA"),
+    ("", 4, ""),
+    ("Abc", 0, "")
+  )
+
+  test("frontTimes") {
+    forAll(frontTimesData) {
+      (str: String, n: Int, result: String) =>
+        frontTimes(str, n) should be(result)
+    }
+  }
 }
