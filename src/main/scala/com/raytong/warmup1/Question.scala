@@ -101,7 +101,7 @@ object Question {
     else str
   }
   
-  def minStart(str: String): Boolean = {
+  def mixStart(str: String): Boolean = {
     if (str.length < 3) false;
     else str.charAt(1) == 'i' && str.charAt(2) == 'x'
   }

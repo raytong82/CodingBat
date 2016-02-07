@@ -442,4 +442,22 @@ class QuestionTestSuite extends FunSuite with Matchers {
         delDel(str) should be(result)
     }
   }
+
+  val mixStartData = Table(
+    ("str", "result"),
+    ("mix snacks", true),
+    ("pix snacks", true),
+    ("piz snacks", false),
+    ("nix", true),
+    ("ni", false),
+    ("n", false),
+    ("", false)
+  )
+
+  test("mixStart") {
+    forAll(mixStartData) {
+      (str: String, result: Boolean) =>
+        mixStart(str) should be(result)
+    }
+  }
 }
