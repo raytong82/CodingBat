@@ -499,10 +499,10 @@ class QuestionTestSuite extends FunSuite with Matchers {
     (5, 2, 6, 6)
   )
 
-  /*test("intMax") {
+  test("intMax") {
     forAll(intMaxData) {
       (a: Int, b: Int, c: Int, result: Int) =>
         intMax(a, b, c) should be(result)
     }
-  }*/
+  }
 }
