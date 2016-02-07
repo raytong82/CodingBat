@@ -401,7 +401,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   val loneTeenData = Table(
     ("a", "b", "result"),
     (13, 99, true),
-    (21, 19, true)
+    (21, 19, true),
     (13, 13, false),
     (14, 20, true),
     (20, 15, true),
