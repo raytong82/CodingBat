@@ -572,4 +572,21 @@ class QuestionTestSuite extends FunSuite with Matchers {
         max1020(a, b) should be(result)
     }
   }
+
+  val stringEData = Table(
+    ("str", "result"),
+    ("Hello", true),
+    ("Heelle", true),
+    ("Heelele", false),
+    ("Hll", false),
+    ("e", false),
+    ("", false)
+  )
+
+  test("stringE") {
+    forAll(stringEData) {
+      (str: String, result: Boolean) =>
+        stringE(str) should be(result)
+    }
+  }
 }
