@@ -123,8 +123,8 @@ object Question {
     val absA = Math.abs(a - 10)
     val absB = Math.abs(b - 10)
     if (absA == absB) 0
-    else if (absA < absB) absA
-    else absB
+    else if (absA < absB) a
+    else b
   }
 
   def inRange(x: Int)(start: Int, end: Int) = x >= start && x <= end

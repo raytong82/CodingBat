@@ -505,4 +505,26 @@ class QuestionTestSuite extends FunSuite with Matchers {
         intMax(a, b, c) should be(result)
     }
   }
+
+  val close10Data = Table(
+    ("a", "b", "result"),
+    (8, 13, 8),
+    (13, 8, 8),
+    (13, 7, 0),
+    (7, 13, 0),
+    (9, 13, 9),
+    (13, 8, 8),
+    (10, 12, 10),
+    (11, 10, 10),
+    (5, 21, 5),
+    (0, 20, 0),
+    (10, 10, 0)
+  )
+
+  test("close10") {
+    forAll(close10Data) {
+      (a: Int, b: Int, result: Int) =>
+        close10(a, b) should be(result)
+    }
+  }
 }
