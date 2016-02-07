@@ -112,7 +112,7 @@ object Question {
       if (len >= 2 && str.charAt(1) == 'z') "oz"
       else "o"
     else if (len >= 2 && str.charAt(1) == 'z') "z"
-    ""
+    else ""
   }
   
   def intMax(a: Int, b: Int, c: Int): Int = {

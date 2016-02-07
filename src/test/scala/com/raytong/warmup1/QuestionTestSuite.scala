@@ -467,7 +467,14 @@ class QuestionTestSuite extends FunSuite with Matchers {
     ("bzoo", "z"),
     ("oxx", "o"),
     ("oz", "oz"),
-    ("ounce", "o")
+    ("ounce", "o"),
+    ("o", "o"),
+    ("abc", ""),
+    ("", ""),
+    ("zoo", ""),
+    ("aztec", "z"),
+    ("zzzz", "z"),
+    ("oznic", "oz")
   )
 
   test("startOz") {
