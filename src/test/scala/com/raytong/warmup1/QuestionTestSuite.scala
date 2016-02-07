@@ -460,4 +460,27 @@ class QuestionTestSuite extends FunSuite with Matchers {
         mixStart(str) should be(result)
     }
   }
+
+  val startOzData = Table(
+    ("str", "result"),
+    ("ozymandias", "oz"),
+    ("bzoo", "z"),
+    ("oxx", "o"),
+    ("oz", "oz"),
+    ("ounce", "o"),
+    ("o", "o"),
+    ("abc", ""),
+    ("", ""),
+    ("zoo", ""),
+    ("aztec", "z"),
+    ("zzzz", "z"),
+    ("oznic", "oz")
+  )
+
+  test("startOz") {
+    forAll(startOzData) {
+      (str: String, result: String) =>
+        startOz(str) should be(result)
+    }
+  }
 }
