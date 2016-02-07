@@ -136,7 +136,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
   val last2Data = Table(
     ("str", "result"),
     ("hixxhi", 1),
-    ("xaxxaxaxx", 1)
+    ("xaxxaxaxx", 1),
     ("axxxaaxx", 2),
     ("xxaxxaxxaxx", 3),
     ("xaxaxaxxx", 0),
