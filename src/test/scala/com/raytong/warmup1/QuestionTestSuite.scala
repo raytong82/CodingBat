@@ -483,4 +483,26 @@ class QuestionTestSuite extends FunSuite with Matchers {
         startOz(str) should be(result)
     }
   }
+
+  val intMaxData = Table(
+    ("a", "b", "c", "result"),
+    (1, 2, 3, 3),
+    (1, 3, 2, 3),
+    (3, 2, 1, 3),
+    (9, 3, 3, 9),
+    (3, 9, 3, 9),
+    (3, 3, 9, 9),
+    (8, 2, 3, 8),
+    (-3, -1, -2, -1),
+    (6, 2, 5, 6),
+    (5, 6, 2, 6),
+    (5, 2, 6, 6)
+  )
+
+  test("intMax") {
+    forAll(intMaxData) {
+      (a: Int, b: Int, c: Int, result: Int) =>
+        intMax(a, b, c) should be(result)
+    }
+  }
 }
