@@ -32,10 +32,10 @@ object Question {
   }
 
   def stringSplosion(str: String): String = {
-    if (str.length <= 1) str
-    else {
-      val list = str.toList
-      stringSplosion(list.init.mkString) :+ list.last
+    def listSplosion(list: List[Char]): List[Char] = {
+      if (list.length <= 1) list
+      else listSplosion(list.init) ++ list
     }
+    listSplosion(str.toList).mkString
   }
 }
