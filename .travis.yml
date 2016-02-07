@@ -7,4 +7,4 @@ after_failure:
   - cat build/reports/tests/index.html
 
 script:
-  - gradle check --stacktrace
+  - gradle check --stacktrace --debug
