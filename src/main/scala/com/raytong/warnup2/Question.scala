@@ -77,4 +77,21 @@ object Question {
     }
     findNum(1) && findNum(2) && findNum(3)
   }
+
+  def stringMatch(a: String, b: String): Int = {
+    if (a.length < 2 || b.length < 2) 0
+    else {
+      val aList = a.toList
+      val aTail = aList.tail
+      val bList = b.toList
+      val bTail = bList.tail
+      val aZip = aList zip aTail
+      val bZip = bList zip bTail
+      def toFilter(t: ((Char, Char), (Char, Char))): Boolean = {
+        val ((x1, x2), (y1, y2)) = t
+        x1 == y1 && x2 == y2
+      }
+      aZip zip bZip filter (toFilter) size
+    }
+  }
 }
