@@ -94,4 +94,16 @@ object Question {
       aZip zip bZip filter (toFilter) size
     }
   }
+
+  def stringX(str: String): String = {
+    if (str.length <= 2) str
+    else {
+      val list = str.toList
+      val first = str.head
+      val remained = str.tail
+      val last = str.last
+      val filtered = remained.filter(_ != 'x')
+      first :+ filtered +: last
+    }
+  }
 }

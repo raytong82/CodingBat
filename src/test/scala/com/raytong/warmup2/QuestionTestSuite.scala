@@ -239,4 +239,23 @@ class QuestionTestSuite extends FunSuite with Matchers {
         stringMatch(a, b) should be(result)
     }
   }
+
+  val stringXData = Table(
+    ("str", "result"),
+    ("xxHxix", "xHix"),
+    ("abxxxcd", "abcd"),
+    ("xabxxxcdx", "xabcdx"),
+    ("xKittenx", "xKittenx"),
+    ("Hello", "Hello"),
+    ("xx", "xx"),
+    ("x", "x"),
+    ("", "")
+  )
+
+  test("stringX") {
+    forAll(stringXData) {
+      (str: String, result: String) =>
+        stringX(str) should be(result)
+    }
+  }
 }
