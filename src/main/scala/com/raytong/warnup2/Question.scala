@@ -106,4 +106,15 @@ object Question {
       (first :: filtered) :+ last mkString
     }
   }
+
+  def altPairs(str: String): String = {
+    val list = str.toList zipWithIndex
+    val fst = list filter (_._2 % 4 == 0)
+    val snd = list filter (_._2 % 4 == 1)
+    def combine(t: ((Char, Int), (Char, Int))): String = {
+      val ((x1, i1), (x2, i2)) = t
+      List(x1, x2) mkString
+    }
+    fst zip snd map (combine) mkString
+  }
 }
