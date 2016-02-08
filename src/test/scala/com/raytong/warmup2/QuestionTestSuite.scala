@@ -277,4 +277,23 @@ class QuestionTestSuite extends FunSuite with Matchers {
         altPairs(str) should be(result)
     }
   }
+
+  val stringYakData = Table(
+    ("str", "result"),
+    ("yakpak", "pak"),
+    ("pakyak", "pak"),
+    ("yak123ya", "123ya"),
+    ("yak", ""),
+    ("yakxxxyak", "xxx"),
+    ("HiyakHi", "HiHi"),
+    ("xxxyakyyyakzzz", "xxxyyzzz"),
+    ("abyokcd", "abcd")
+  )
+
+  test("stringYak") {
+    forAll(stringYakData) {
+      (str: String, result: String) =>
+        stringYak(str) should be(result)
+    }
+  }
 }

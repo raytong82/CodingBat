@@ -119,4 +119,8 @@ object Question {
     val dummy = ('?', -1)
     fst zipAll (snd, dummy, dummy) map (combine) mkString
   }
+
+  def stringYak(str: String): String = {
+    str.replaceAll("y.k", "")
+  }
 }
