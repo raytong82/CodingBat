@@ -113,8 +113,10 @@ object Question {
     val snd = list filter (_._2 % 4 == 1)
     def combine(t: ((Char, Int), (Char, Int))): String = {
       val ((x1, i1), (x2, i2)) = t
-      List(x1, x2) mkString
+      if (i2 == -1) x1 toString
+      else List(x1, x2) mkString
     }
-    fst zip snd map (combine) mkString
+    val dummy = ('?', -1)
+    fst zipAll (snd, dummy, dummy) map (combine) mkString
   }
 }
