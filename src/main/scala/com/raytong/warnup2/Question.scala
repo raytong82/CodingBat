@@ -102,8 +102,8 @@ object Question {
       val first = str.head
       val remained = str.tail
       val last = str.last
-      val filtered = remained.filter(_ != 'x')
-      (first :: filtered) :+ last
+      val filtered = remained.filter(_ != 'x').toList
+      (first :: filtered) :+ last mkString
     }
   }
 }
