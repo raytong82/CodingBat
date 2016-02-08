@@ -273,7 +273,7 @@ class QuestionTestSuite extends FunSuite with Matchers {
 
   test("altPairs") {
     forAll(altPairsData) {
-      ("str": String, result: String) =>
+      (str: String, result: String) =>
         altPairs(str) should be(result)
     }
   }
