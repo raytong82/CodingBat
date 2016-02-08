@@ -103,7 +103,7 @@ object Question {
       val remained = str.tail
       val last = str.last
       val filtered = remained.filter(_ != 'x')
-      first :: filtered +: last
+      first :: filtered :+ last
     }
   }
 }
